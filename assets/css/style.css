@@ -1,0 +1,155 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: "jost", sans-serif;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* --------------------------------  */
+
+
+.container {
+    width: 300px;
+    padding: 20px;
+    margin: 40px auto;
+    border-radius: 8px;
+    background-image: linear-gradient(150deg, #0fe3b1, #2daaa2, #58588a);
+}
+
+.container .search-place {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    & input {
+        flex: 1;
+        padding: 6px 15px;
+        border-radius: 20px;
+    }
+
+    & div:has(i) {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    & div:has(i):hover {
+        opacity: .8;
+    }
+
+    & div:has(i):active {
+        scale: .92;
+    }
+
+    & * {
+        display: block;
+        background-color: #ebfffd;
+        border: none;
+        outline: none;
+    }
+}
+
+
+/* --- */
+
+.weather-informations {
+    display: none;
+    overflow: hidden;
+    user-select: none;
+}
+
+.weather-informations .weather-icon {
+    margin-block: 20px;
+    user-select: none;
+}
+
+.weather-informations .weather-icon img {
+    width: 100px;
+    display: block;
+    margin-inline: auto;
+}
+
+
+/* --- */
+
+.weather-main {
+    color: white;
+    font-weight: 500;
+    text-align: center;
+
+    margin-bottom: 30px;
+
+    & .temp {
+        font-size: 50px;
+    }
+
+    & .city {
+        font-size: 20px;
+        font-weight: 400;
+    }
+}
+
+
+
+/* ----- */
+
+.weather_additional-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.weather_additional-info>div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+
+    & div:last-child {
+        display: flex;
+        flex-direction: column;
+
+        & span:last-child {
+            font-weight: 300;
+            font-size: 14px;
+        }
+    }
+}
+
+
+/* --- */
+
+
+.when-error {
+    display: none;
+    margin: 20px 0;
+
+    & h4 {
+        text-align: center;
+        font-size: 30px;
+        color: #ff0000a8;
+    }
+
+    & p {
+        color: white;
+        text-align: center;
+    }
+}
