@@ -70,7 +70,8 @@ body {
 /* --- */
 
 .weather-informations {
-    display: none;
+    max-height: 0px;
+    transition: max-height .5s ease;
     overflow: hidden;
     user-select: none;
 }

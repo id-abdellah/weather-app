@@ -39,13 +39,13 @@ searchIcon.addEventListener("click", () => {
             humidityPersontage.textContent = data.main.humidity + "%";
             windValue.textContent = data.wind.speed + "km/h";
 
-            weatherMainContainer.style.display = "block";
+            weatherMainContainer.style.maxHeight = "1000px";
             whenErrorCase.style.display = "none"
         }
     ).catch(
         (error) => {
+            weatherMainContainer.style.maxHeight = "0px";
             whenErrorCase.style.display = "block"
-            weatherMainContainer.style.display = "none";
         }
     )
 
