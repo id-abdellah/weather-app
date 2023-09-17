@@ -34,7 +34,7 @@ body {
     gap: 10px;
 
     & input {
-        flex: 1;
+        width: 90%;
         padding: 6px 15px;
         border-radius: 20px;
     }
